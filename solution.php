@@ -7,7 +7,7 @@ function Dump($arA) {
     echo "</pre>";
 }
 
-$number = 20;
+$number = 5;
 $n = $number - 1;
 $i = 0;
 $j = 0;
@@ -74,15 +74,14 @@ while ($count <= ($number ** 2)) {
 <body>
     <table>
         <tbody>
-        <?php foreach($arM as $key1 => $value1): ?>
+        <?php for($i = 0; $i < $number; $i++): ?>
             <tr>
             <?php
-            ksort($arM[$key1]);
-            foreach($arM[$key1] as $key2 => $value2): ?>
-                <td><?=$value2?></td>
-            <?php endforeach; ?>
+            for($j = 0; $j < $number; $j++): ?>
+                <td><?=$arM[$i][$j]?></td>
+            <?php endfor; ?>
             </tr>
-        <?php endforeach; ?>
+        <?php endfor; ?>
         <tbody>
     <table>
 </body>
